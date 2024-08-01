@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحديث المعلومات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>تحديث المعلومات</h1>
+    <form action="/update/{{ user_id }}" method="POST">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" value="{{ user_info['name'] }}" required><br><br>
+        <label for="surname">اللقب:</label>
+        <input type="text" id="surname" name="surname" value="{{ user_info['surname'] }}" required><br><br>
+        <label for="contact">رقم الهاتف أو البريد الإلكتروني:</label>
+        <input type="text" id="contact" name="contact" value="{{ user_info['contact'] }}" required><br><br>
+        <button type="submit">تحديث</button>
+    </form>
+</body>
+</html>

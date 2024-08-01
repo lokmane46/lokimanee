@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>التسجيل</h1>
+    <form action="/register" method="POST">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="surname">اللقب:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+        <label for="contact">رقم الهاتف أو البريد الإلكتروني:</label>
+        <input type="text" id="contact" name="contact" required><br><br>
+        <button type="submit">تسجيل</button>
+    </form>
+</body>
+</html>
